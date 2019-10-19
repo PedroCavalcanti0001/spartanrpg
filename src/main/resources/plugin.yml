@@ -1,0 +1,10 @@
+name: SpartanRPG
+main: me.zkingofkill.spartanrpg.SpartanRPG
+version: 1.0.0
+api-version: 1.14
+description: Plugin de rpg do servidor spartan
+
+
+commands:
+  rpg:
+    description: comando de rpg.

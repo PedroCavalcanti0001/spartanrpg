@@ -1,8 +1,7 @@
 package me.zkingofkill.spartanrpg.config.files
 
-import me.zkingofkill.spartanrpg.objects.enums.MenuType
-import me.zkingofkill.spartanrpg.objects.config.ConfigItem
-import me.zkingofkill.spartanrpg.objects.config.ConfigMenu
+import me.zkingofkill.spartanrpg.models.config.ConfigItem
+import me.zkingofkill.spartanrpg.models.config.ConfigMenu
 import me.zkingofkill.spartanrpg.SpartanRPG
 import org.bukkit.Material
 import spartanconfigapi.ConfigBuilder
@@ -36,7 +35,7 @@ class Guis : ConfigBuilder() {
 
     @ConfigValue(path = "classSelector.items.archer.position.column")
     private var classSelectorItemPositionColumn = 1
-
+/*
     fun menu(menuType: MenuType): ConfigMenu {
         val path = when (menuType) {
             MenuType.CLASS_SELECTOR -> "classSelector"
@@ -66,7 +65,7 @@ class Guis : ConfigBuilder() {
         }
         return ConfigMenu(rows, columns, items, title)
     }
-
+ */
 
     fun init() {
         super.init(SpartanRPG.singleton, this)

@@ -1,7 +1,6 @@
 package me.zkingofkill.spartanrpg.config.files
 
 import me.zkingofkill.spartanrpg.SpartanRPG
-import me.zkingofkill.spartanrpg.objects.User
 import spartanconfigapi.ConfigBuilder
 import spartanconfigapi.annotations.Config
 import spartanconfigapi.annotations.ConfigValue

@@ -1,7 +1,6 @@
 package me.zkingofkill.spartanrpg.listeners
 
-import me.zkingofkill.spartanrpg.objects.User
-import me.zkingofkill.spartanrpg.views.ClassSelector
+import me.zkingofkill.spartanrpg.models.User
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent

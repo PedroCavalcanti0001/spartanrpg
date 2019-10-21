@@ -1,7 +1,7 @@
 package me.zkingofkill.spartanrpg.hooks
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion
-import me.zkingofkill.spartanrpg.objects.User
+import me.zkingofkill.spartanrpg.models.User
 import org.bukkit.entity.Player
 import kotlin.math.roundToInt
 

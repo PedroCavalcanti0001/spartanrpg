@@ -1,13 +1,12 @@
-package me.zkingofkill.spartanrpg.objects
+package me.zkingofkill.spartanrpg.models
 
 import com.google.gson.Gson
-import com.google.gson.annotations.Expose
 import me.zkingofkill.spartanrpg.SpartanRPG
-import me.zkingofkill.spartanrpg.objects.enums.ClassType
 import me.zkingofkill.spartanrpg.database.UserDAO
-import me.zkingofkill.spartanrpg.objects.classes.Class
 import org.bukkit.Bukkit
-import org.bukkit.entity.Player
+import sun.audio.AudioPlayer.player
+import org.bukkit.permissions.PermissionAttachmentInfo
+
 
 class User(
     val playername: String,
@@ -15,7 +14,7 @@ class User(
     var arcaneEnergy: Double = 0.0,
     var exp: Double = 0.0,
     var level: Int = 0,
-    var clazzType: ClassType = ClassType.ALCHEMIST
+    var abilities: Abilities = Abilities()
 ) {
     fun upLevel(levels: Int = 1): Boolean {
         var announce = false
@@ -71,6 +70,16 @@ class User(
 
     override fun toString(): String {
         return Gson().toJson(this)
+    }
+
+    fun simultaneouslyActiveSkills(): Int {
+        var simultaneouslyActiveSkills = SpartanRPG.singleton.config.generalConfig.defaultNumberOfConcurrentSkills
+        for (perm in Bukkit.getPlayer(this.playername)!!.effectivePermissions) {
+            if (perm.permission.contains("spartanrpg.skills.")) {
+                simultaneouslyActiveSkills = Integer.parseInt(perm.permission.split("\\.".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()[3])
+            }
+        }
+        return simultaneouslyActiveSkills
     }
 
     companion object {

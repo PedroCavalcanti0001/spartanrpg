@@ -1,7 +1,7 @@
 package me.zkingofkill.spartanrpg.config.files
 
 import me.zkingofkill.spartanrpg.SpartanRPG
-import me.zkingofkill.spartanrpg.objects.config.ConfigLevel
+import me.zkingofkill.spartanrpg.models.config.ConfigLevel
 import spartanconfigapi.ConfigBuilder
 import spartanconfigapi.annotations.Config
 import spartanconfigapi.annotations.ConfigValue

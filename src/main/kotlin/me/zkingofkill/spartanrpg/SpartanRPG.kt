@@ -1,15 +1,15 @@
 package me.zkingofkill.spartanrpg
 
 import fr.minuskube.inv.InventoryManager
+import me.zkingofkill.spartanrpg.abilities.Ability
+import me.zkingofkill.spartanrpg.abilities.Pirate
 import me.zkingofkill.spartanrpg.commands.RpgCommand
 import me.zkingofkill.spartanrpg.config.Config
 import me.zkingofkill.spartanrpg.database.ConnectionFactory
 import me.zkingofkill.spartanrpg.hooks.PlaceHolderAPI
-import me.zkingofkill.spartanrpg.listeners.CraftItemEvent
 import me.zkingofkill.spartanrpg.listeners.PlayerJoinEvent
-import me.zkingofkill.spartanrpg.objects.User
+import me.zkingofkill.spartanrpg.models.User
 import org.bukkit.plugin.java.JavaPlugin
-import java.util.logging.Logger
 
 class SpartanRPG : JavaPlugin() {
 
@@ -29,9 +29,7 @@ class SpartanRPG : JavaPlugin() {
         ConnectionFactory.init()
         PlaceHolderAPI().register()
         server.pluginManager.registerEvents(PlayerJoinEvent(), this)
-        server.pluginManager.registerEvents(CraftItemEvent(), this)
-
-        
+        Ability.registerAbilitiesListeners()
         getCommand("rpg")?.setExecutor(RpgCommand())
     }
 

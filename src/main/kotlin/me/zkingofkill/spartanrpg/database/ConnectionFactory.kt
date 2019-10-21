@@ -1,7 +1,7 @@
 package me.zkingofkill.spartanrpg.database
 
 import me.zkingofkill.spartanrpg.SpartanRPG
-import me.zkingofkill.spartanrpg.objects.User
+import me.zkingofkill.spartanrpg.models.User
 import org.bukkit.Bukkit
 import org.bukkit.scheduler.BukkitRunnable
 import java.sql.Connection

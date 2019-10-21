@@ -1,4 +1,4 @@
-package me.zkingofkill.spartanrpg.objects.config
+package me.zkingofkill.spartanrpg.models.config
 
 import org.bukkit.inventory.ItemStack
 

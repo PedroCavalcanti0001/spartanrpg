@@ -1,10 +1,8 @@
 package me.zkingofkill.spartanrpg.database
 
 import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import me.zkingofkill.spartanrpg.SpartanRPG
-import me.zkingofkill.spartanrpg.objects.User
-import org.bukkit.Bukkit
+import me.zkingofkill.spartanrpg.models.User
 import java.sql.SQLException
 
 

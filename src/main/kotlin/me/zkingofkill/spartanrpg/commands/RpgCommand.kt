@@ -1,7 +1,7 @@
 package me.zkingofkill.spartanrpg.commands
 
 import me.zkingofkill.spartanrpg.SpartanRPG
-import me.zkingofkill.spartanrpg.objects.User
+import me.zkingofkill.spartanrpg.models.User
 import org.bukkit.Bukkit
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
